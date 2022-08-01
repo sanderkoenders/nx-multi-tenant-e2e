@@ -7,8 +7,9 @@ export interface ContactPageTestProps {
   content: ContactPageContentMapping;
 }
 
-export const contactPageTests = ({ content }: ContactPageTestProps) => {
-  describe('Contact', () => {
+export const contactPageTests =
+  ({ content }: ContactPageTestProps) =>
+  () => {
     it('should show the contact page heading', () => {
       cy.visit('/contact');
 
@@ -28,5 +29,4 @@ export const contactPageTests = ({ content }: ContactPageTestProps) => {
       cy.findByRole('heading', { name: /email/i, level: 2 });
       cy.findByText(new RegExp(content.email, 'i'));
     });
-  });
-};
+  };
