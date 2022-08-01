@@ -4,8 +4,9 @@ export interface HeaderTestsProps {
   };
 }
 
-export const headerTests = ({ content }: HeaderTestsProps) => {
-  describe('Header', () => {
+export const headerTests =
+  ({ content }: HeaderTestsProps) =>
+  () => {
     it('should show the shop name in the header', () => {
       cy.visit('/');
 
@@ -18,5 +19,4 @@ export const headerTests = ({ content }: HeaderTestsProps) => {
       cy.findByRole('link', { name: /products/i });
       cy.findByRole('link', { name: /contact/i });
     });
-  });
-};
+  };

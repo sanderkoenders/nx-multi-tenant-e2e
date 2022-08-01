@@ -1,13 +1,14 @@
-import { contactPageTests } from '@workspace/shared/e2e';
+import { ContactPageTestProps, contactPageTests } from '@workspace/shared/e2e';
+import { joinedDescribe } from '@workspace/test/util/e2e';
 
-contactPageTests({
+const contactPageContent: ContactPageTestProps = {
   content: {
     phoneNumber: '0687654321',
     email: 'jenny@yakshop.com',
   },
-});
+};
 
-describe('Contact page', () => {
+joinedDescribe('Contact Page', contactPageTests(contactPageContent), () => {
   it('should show a contact form', () => {
     cy.visit('/contact');
 

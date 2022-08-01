@@ -5,8 +5,9 @@ export interface ProductsTestsProps {
   };
 }
 
-export const productsTests = ({ content }: ProductsTestsProps) => {
-  describe('Products', () => {
+export const productsTests =
+  ({ content }: ProductsTestsProps) =>
+  () => {
     it('should show the correct header', () => {
       cy.visit('/');
 
@@ -20,5 +21,4 @@ export const productsTests = ({ content }: ProductsTestsProps) => {
         cy.findByRole('heading', { name: item, level: 2, exact: true })
       );
     });
-  });
-};
+  };
