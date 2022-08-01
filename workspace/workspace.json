@@ -6,6 +6,7 @@
     "app1-e2e": "apps/app1-e2e",
     "app2": "apps/app2",
     "app2-e2e": "apps/app2-e2e",
+    "shared-e2e": "libs/shared/e2e",
     "shared-ui": "libs/shared/ui"
   }
 }

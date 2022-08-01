@@ -1,14 +1,7 @@
-describe('Header', () => {
-  it('should show the shop name in the header', () => {
-    cy.visit('/');
+import { headerTests } from '@workspace/shared/e2e';
 
-    cy.findByRole('link', { name: /goatshop/i });
-  });
-
-  it('should show two menu items (products & contact)', () => {
-    cy.visit('/');
-
-    cy.findByRole('link', { name: /products/i });
-    cy.findByRole('link', { name: /contact/i });
-  });
+headerTests({
+  content: {
+    applicationName: /goatshop/i,
+  },
 });

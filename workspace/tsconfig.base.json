@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@workspace/shared/e2e": ["libs/shared/e2e/src/index.ts"],
       "@workspace/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
