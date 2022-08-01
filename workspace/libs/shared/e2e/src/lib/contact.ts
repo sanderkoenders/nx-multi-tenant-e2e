@@ -1,14 +1,12 @@
+import { TestsWithContent } from '@workspace/test/util/e2e';
+
 export interface ContactPageContentMapping {
   phoneNumber: string;
   email: string;
 }
 
-export interface ContactPageTestProps {
-  content: ContactPageContentMapping;
-}
-
 export const contactPageTests =
-  ({ content }: ContactPageTestProps) =>
+  ({ content }: TestsWithContent<ContactPageContentMapping>) =>
   () => {
     it('should show the contact page heading', () => {
       cy.visit('/contact');

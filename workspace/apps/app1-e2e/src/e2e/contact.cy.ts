@@ -1,7 +1,10 @@
-import { ContactPageTestProps, contactPageTests } from '@workspace/shared/e2e';
-import { joinedDescribe } from '@workspace/test/util/e2e';
+import {
+  ContactPageContentMapping,
+  contactPageTests,
+} from '@workspace/shared/e2e';
+import { joinedDescribe, TestsWithContent } from '@workspace/test/util/e2e';
 
-const contactPageContent: ContactPageTestProps = {
+const contactPageContent: TestsWithContent<ContactPageContentMapping> = {
   content: {
     phoneNumber: '0687654321',
     email: 'jenny@yakshop.com',

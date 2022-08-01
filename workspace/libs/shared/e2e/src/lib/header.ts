@@ -1,11 +1,11 @@
-export interface HeaderTestsProps {
-  content: {
-    applicationName: RegExp;
-  };
+import { TestsWithContent } from '@workspace/test/util/e2e';
+
+export interface HeaderTestsContentMapping {
+  applicationName: RegExp;
 }
 
 export const headerTests =
-  ({ content }: HeaderTestsProps) =>
+  ({ content }: TestsWithContent<HeaderTestsContentMapping>) =>
   () => {
     it('should show the shop name in the header', () => {
       cy.visit('/');

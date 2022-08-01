@@ -1,12 +1,12 @@
-export interface ProductsTestsProps {
-  content: {
-    heading: RegExp;
-    items: RegExp[];
-  };
+import { TestsWithContent } from '@workspace/test/util/e2e';
+
+export interface ProductsTestsContentMapping {
+  heading: RegExp;
+  items: RegExp[];
 }
 
 export const productsTests =
-  ({ content }: ProductsTestsProps) =>
+  ({ content }: TestsWithContent<ProductsTestsContentMapping>) =>
   () => {
     it('should show the correct header', () => {
       cy.visit('/');
